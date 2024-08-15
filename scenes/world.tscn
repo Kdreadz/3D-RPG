@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://u2gkmadlto2f"]
 
-[ext_resource type="Texture2D" uid="uid://bafonw1outsyw" path="res://EraOfFantasy_Grasslands_v2/Tileset/Tilesheet_Shadow.png" id="1_nkwgr"]
-[ext_resource type="Texture2D" uid="uid://yypyupgcax4s" path="res://EraOfFantasy_Grasslands_v2/Decorations/Decorations_c1.png" id="2_hye1t"]
-[ext_resource type="Texture2D" uid="uid://c18epmynh5po4" path="res://EraOfFantasy_Grasslands_v2/Decorations/Decorations_c2.png" id="3_fsj2g"]
+[ext_resource type="Texture2D" uid="uid://bafonw1outsyw" path="res://Art/EraOfFantasy_Grasslands_v2/Tileset/Tilesheet_Shadow.png" id="1_nkwgr"]
+[ext_resource type="Texture2D" uid="uid://yypyupgcax4s" path="res://Art/EraOfFantasy_Grasslands_v2/Decorations/Decorations_c1.png" id="2_hye1t"]
+[ext_resource type="Texture2D" uid="uid://c18epmynh5po4" path="res://Art/EraOfFantasy_Grasslands_v2/Decorations/Decorations_c2.png" id="3_fsj2g"]
 [ext_resource type="PackedScene" uid="uid://cdb100fe8redg" path="res://scenes/player.tscn" id="4_y74lj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gi6cq"]
@@ -1841,6 +1841,7 @@ layer_0/tile_data = PackedInt32Array(0, 65537, 13, 1, 65537, 13, 2, 65537, 13, 3
 layer_1/name = "cliffs"
 layer_1/tile_data = PackedInt32Array(65564, 327681, 22, 65565, 327681, 22, 65566, 327681, 22, 65563, 262145, 22, 27, 262145, 21, 26, 196609, 21, 28, 327681, 20, 29, 327681, 20, 30, 327681, 20, 65567, 262145, 21, 131103, 262145, 22, 131104, 327681, 22, 131105, 327681, 22, 31, 327681, 20, 32, 327681, 20, 65568, 327681, 20, 65569, 327681, 20, 33, 327681, 20, 196639, 262145, 25, 196640, 327681, 25, 196641, 327681, 25, 131102, 327681, 25, 131101, 327681, 25, 131100, 327681, 25, 131099, 262145, 25, 65562, 262145, 25)
 layer_2/name = "ysort"
-layer_2/tile_data = PackedInt32Array(-65525, 1376258, 1, 65552, 1376258, 1, 196617, 65538, 1, 196629, 65538, 1, 524290, 65538, 1, 655372, 851970, 1, 786434, 1638402, 4, 655365, 1638402, 4, 720905, 1179650, 1, 393228, 1900546, 9, 262150, 917506, 10, 851981, 1638402, 18, 983049, 1835010, 18, 786436, 1835010, 18, 393226, 1835010, 16, 393236, 1835010, 16, 458774, 1835010, 16, 393231, 589826, 10, 720916, 720898, 10, 720917, 524290, 10, 655367, 2097154, 9, 65538, 2097154, 9, 393237, 2621442, 18, 65550, 2097154, 11, 262157, 2293762, 9, 131077, 2752514, 12, 327691, 2752514, 14, 851987, 2752514, 12, 983054, 2752514, 12, 917509, 2752514, 12, 655361, 2752514, 14, 65554, 2752514, 14, 327703, 2752514, 14, 524313, 2752514, 12, 131085, 2555906, 12, 327697, 2686978, 12, 655377, 2752514, 12, 655378, 2686978, 12, 589850, 2686978, 12, 851974, 2686978, 12, 917514, 2621442, 12, 655360, 2490370, 12, 917522, 2621442, 12, 458758, 1114114, 11, 393233, 1114114, 11, 720921, 1179650, 12, 589839, 1114114, 12, 131072, 1114114, 12, 262147, 1179650, 11, 655369, 1179650, 11, 589846, 2162690, 15, 327711, 2162690, 15)
+layer_2/tile_data = PackedInt32Array()
 
 [node name="player" parent="." instance=ExtResource("4_y74lj")]
+visible = false
