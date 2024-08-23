@@ -1,0 +1,106 @@
+[gd_scene load_steps=20 format=3 uid="uid://6n75t7l2klbj"]
+
+[ext_resource type="Texture2D" uid="uid://3sbad7qniw2m" path="res://Graphics/Monsters/Slime/Slime_Death/Slime_Death1.png" id="1_tn7u5"]
+[ext_resource type="Texture2D" uid="uid://5w0ecrso52uy" path="res://Graphics/Monsters/Slime/Slime_Death/Slime_Death2.png" id="2_xl2gd"]
+[ext_resource type="Texture2D" uid="uid://cmy8fjds2xeod" path="res://Graphics/Monsters/Slime/Slime_Death/Slime_Death3.png" id="3_wht21"]
+[ext_resource type="Texture2D" uid="uid://camnnhffk0mh" path="res://Graphics/Monsters/Slime/Slime_Death/Slime_Death4.png" id="4_rax8i"]
+[ext_resource type="Texture2D" uid="uid://c04o3cdjjjxex" path="res://Graphics/Monsters/Slime/Slime_Idle/Slime_Idle1.png" id="5_t3c6t"]
+[ext_resource type="Texture2D" uid="uid://cviugatmxhgk1" path="res://Graphics/Monsters/Slime/Slime_Idle/Slime_Idle2.png" id="6_hl5t0"]
+[ext_resource type="Texture2D" uid="uid://bt5f5o7jrnvnr" path="res://Graphics/Monsters/Slime/Slime_Idle/Slime_Idle3.png" id="7_0k3yx"]
+[ext_resource type="Texture2D" uid="uid://dfbb5ue56subs" path="res://Graphics/Monsters/Slime/Slime_Idle/Slime_Idle4.png" id="8_4nc7u"]
+[ext_resource type="Texture2D" uid="uid://du1jrm18x4i0v" path="res://Graphics/Monsters/Slime/Slime_Start/Slime_Start1.png" id="9_p5u1k"]
+[ext_resource type="Texture2D" uid="uid://d0hchj2pe08oy" path="res://Graphics/Monsters/Slime/Slime_Start/Slime_Start2.png" id="10_e70i7"]
+[ext_resource type="Texture2D" uid="uid://djjdol116hnx8" path="res://Graphics/Monsters/Slime/Slime_Start/Slime_Start3.png" id="11_uw5hr"]
+[ext_resource type="Texture2D" uid="uid://rr7di84lkh6s" path="res://Graphics/Monsters/Slime/Slime_Start/Slime_Start4.png" id="12_ncxa6"]
+[ext_resource type="Texture2D" uid="uid://cyomgc5cb3uwj" path="res://Graphics/Monsters/Slime/Slime_Revive/Slime_Revive1.png" id="13_yti0e"]
+[ext_resource type="Texture2D" uid="uid://bwevajcfftjmq" path="res://Graphics/Monsters/Slime/Slime_Revive/Slime_Revive2.png" id="14_fimcu"]
+[ext_resource type="Texture2D" uid="uid://cfwqa6wp3guoe" path="res://Graphics/Monsters/Slime/Slime_Revive/Slime_Revive3.png" id="15_lwnci"]
+[ext_resource type="Texture2D" uid="uid://rwg48m1lb38c" path="res://Graphics/Monsters/Slime/Slime_Revive/Slime_Revive4.png" id="16_5ylv5"]
+[ext_resource type="Script" path="res://scripts/Slime_Logic.gd" id="17_fn8u8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bo5yv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tn7u5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xl2gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wht21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rax8i")
+}],
+"loop": true,
+"name": &"Slime_Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_t3c6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hl5t0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0k3yx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4nc7u")
+}],
+"loop": true,
+"name": &"Slime_Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_p5u1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_e70i7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_uw5hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ncxa6")
+}],
+"loop": true,
+"name": &"Slime_Move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_yti0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fimcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lwnci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5ylv5")
+}],
+"loop": true,
+"name": &"Slime_Revive",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j83px"]
+radius = 8.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_bo5yv")
+animation = &"Slime_Move"
+script = ExtResource("17_fn8u8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_j83px")
