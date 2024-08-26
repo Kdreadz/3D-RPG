@@ -19,17 +19,3 @@ func _physics_process(delta):
 
 #broken idk what im doing wrong lol
 
-if move_left()
-	velocity.x = -10 * speed
-	$AnimatedSprite2d.play("move")
-elif move_right()
-	velocity.x = 10 * speed
-	$AnimatedSprite2d.play("move")
-elif move_up()
-	velocity.x = -10 * speed
-	$AnimatedSprite2d.play("move")
-elif move_down()
-	velocity.x = 10 * speed
-	$AnimatedSprite2d.play("move")
-else:
-	$AnimatedSprite2d.play("move")
